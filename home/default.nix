@@ -22,5 +22,16 @@
       };
     };
 
+    # i cant even test this right now
+    programs.kitty.enable = true;
+    wayland.windowManager.hyprland = {
+      enable = true;
+      package = null;
+      portalPackage = null;
+      settings = {
+        "$mod" = "SUPER";
+      };
+    };
+
     home.stateVersion = "25.05";
 }

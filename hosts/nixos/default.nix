@@ -10,6 +10,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
+    backupFileExtension = "bak";
     users.lucas = import ../../home;
   };
 
@@ -47,6 +48,12 @@
     interactiveShellInit = ''
       set fish_greeting
     '';
+  };
+
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+    xwayland.enable = true;
   };
 
   programs.nix-ld.enable = true; # so vscode remote ssh works
