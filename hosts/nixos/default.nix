@@ -11,17 +11,19 @@
     ];
 
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+  };
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking = {
+    hostName = "nixos";
+    networkmanager.enable = true;
+  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  virtualisation.virtualbox.guest.enable = true;
 
   services.openssh.enable = true;
 
@@ -100,7 +102,6 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-    neovim
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
