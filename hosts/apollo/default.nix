@@ -1,8 +1,7 @@
 { inputs, config, lib, pkgs, ... }:
 
 {
-  imports =
-  [ 
+  imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
 
@@ -40,7 +39,7 @@
 
   services.openssh.enable = true;
 
-  users.groups.lucas = {};
+  users.groups.lucas = { };
   users.users.lucas = {
     isNormalUser = true;
     shell = pkgs.fish;
@@ -64,7 +63,8 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd hyprland";
+        command =
+          "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd hyprland";
       };
     };
   };

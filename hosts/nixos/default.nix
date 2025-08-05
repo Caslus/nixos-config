@@ -1,8 +1,7 @@
 { inputs, config, lib, pkgs, ... }:
 
 {
-  imports =
-  [ 
+  imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
   ];
@@ -32,7 +31,7 @@
 
   services.openssh.enable = true;
 
-  users.groups.lucas = {};
+  users.groups.lucas = { };
   users.users.lucas = {
     isNormalUser = true;
     shell = pkgs.fish;

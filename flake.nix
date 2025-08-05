@@ -8,7 +8,7 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,18 +20,14 @@
       # main laptop
       apollo = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [
-          ./hosts/apollo
-        ];
+        modules = [ ./hosts/apollo ];
         specialArgs = { inherit inputs; };
       };
 
       # virtual machine for testing
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [
-          ./hosts/nixos
-        ];
+        modules = [ ./hosts/nixos ];
         specialArgs = { inherit inputs; };
       };
     };
