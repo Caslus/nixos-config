@@ -13,6 +13,10 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware/master";
+    };
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
@@ -20,7 +24,10 @@
       # main laptop
       apollo = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [ ./hosts/apollo ];
+        modules = [
+          ./hosts/apollo
+          inputs.nixos-hardware.nixosModules.asus-zephyrus-gu603h # even though this laptop is a GU604VI
+        ];
         specialArgs = { inherit inputs; };
       };
 

@@ -16,6 +16,11 @@
       "$terminal" = "kitty";
       "$notificationDaemon" = "swaync";
       "exec-once" = [ "$terminal &" "$notificationDaemon" ];
+
+      "monitor" = [
+        "eDP-1, 2560x1600@240, 0x0, 1"
+        "HDMI-A-1, 2560x1440@144, 2560x0, 1"
+      ];
     };
   };
 }
