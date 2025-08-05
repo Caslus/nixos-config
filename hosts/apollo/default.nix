@@ -58,6 +58,8 @@
 
   programs.hyprland.enable = true;
 
+  programs.firefox.enable = true;
+
   programs.nix-ld.enable = true; # so vscode remote ssh works
 
   system.stateVersion = "25.05";

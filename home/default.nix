@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
     imports =
@@ -15,6 +15,7 @@
         gnupg
         fastfetch
         neovim
+
     ];
 
     # i cant even test this right now
