@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     nixfmt-rfc-style
-    nixd
+    nil
   ];
 
   programs.vscode = {
@@ -17,8 +17,17 @@
         ];
 
         userSettings = {
-          "nix.serverPath" = "nixd";
+          "nix.enableLanguageServer" = true;
+          "nix.serverPath" = "nil";
+          "nix.serverSettings" = {
+            "nil" = {
+              "formatting" = {
+                "command" = [ "nixfmt" ];
+              };
+            };
+          };
           "workbench.colorTheme" = "Catppuccin Mocha";
+          "editor.formatOnSave" = true;
         };
       };
     };
