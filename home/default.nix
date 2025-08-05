@@ -16,6 +16,7 @@
         fastfetch
         neovim
 
+        swaynotificationcenter
     ];
 
     # i cant even test this right now
@@ -25,7 +26,11 @@
       settings = {
         "$mainMod" = "SUPER";
 	"$terminal" = "kitty";
-        "exec-once" = "$terminal";
+	"$notificationDaemon" = "swaync";
+        "exec-once" = [
+	  "$terminal &"
+	  "$notificationDaemon"
+	];
 
         bind = [
           "$mainMod, RETURN, exec, $terminal"
