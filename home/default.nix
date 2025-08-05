@@ -10,19 +10,9 @@
     gnupg
     fastfetch
     neovim
-    nixfmt
-    nixd
 
     swaynotificationcenter
   ];
-
-  programs.vscode = {
-    enable = true;
-    extensions = with pkgs.vscode-extensions; [
-      catppuccin.catppuccin-vsc
-      jnoortheen.nix-ide
-    ];
-  };
 
   # i cant even test this right now
   programs.kitty.enable = true;

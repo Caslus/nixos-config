@@ -16,6 +16,8 @@ in {
   ++ lib.optionals (hostname == "apollo") [
     ../../modules/wm/hyprland/home.nix
     ../../modules/wm/hyprland/binds.nix
+
+    ../../modules/gui/vscode.nix
   ];
 
   programs.git = {
