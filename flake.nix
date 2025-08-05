@@ -12,10 +12,20 @@
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
+      # main laptop
       apollo = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./hosts/apollo
+        ];
+        specialArgs = { inherit inputs; };
+      };
+
+      # virtual machine for testing
+      nixos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/nixos
         ];
         specialArgs = { inherit inputs; };
       };
