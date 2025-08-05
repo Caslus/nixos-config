@@ -14,6 +14,8 @@
     users.lucas = import ../../home;
   };
 
+  fonts.fontDir.enable = true;
+
   boot = {
     loader = {
       systemd-boot.enable = true;
@@ -22,7 +24,7 @@
   };
 
   networking = {
-    hostName = "nixos";
+    hostName = "apollo";
     networkmanager.enable = true;
   };
 

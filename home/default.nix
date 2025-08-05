@@ -1,8 +1,12 @@
 { config, pkgs, ... }:
 
 {
-    home.username = "lucas";
-    home.homeDirectory = "/home/lucas";
+    imports =
+    [ 
+      ./users/lucas.nix
+
+      ./features/shell/starship
+    ];
 
     home.packages = with pkgs; [ 
         curl
@@ -12,15 +16,6 @@
         fastfetch
         neovim
     ];
-
-    programs.git = {
-      enable = true;
-      userName = "Lucas Philippe";
-      userEmail = "git@lucasphilippe.com";
-      extraConfig = {
-        init.defaultBranch = "main";
-      };
-    };
 
     # i cant even test this right now
     programs.kitty.enable = true;
