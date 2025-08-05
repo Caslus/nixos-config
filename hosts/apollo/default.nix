@@ -5,6 +5,8 @@
   [ 
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
+
+    ../../modules/wm/hyprland
   ];
 
   home-manager = {
@@ -57,8 +59,6 @@
       set fish_greeting
     '';
   };
-
-  programs.hyprland.enable = true;
 
   services.greetd = {
     enable = true;
