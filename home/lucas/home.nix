@@ -1,12 +1,12 @@
-{ config,
-  pkgs,
-  inputs,
+{
   lib,
   osConfig,
   ...
-  }: let
-    hostname = osConfig.networking.hostName or "unknown";
-in {
+}:
+let
+  hostname = osConfig.networking.hostName or "unknown";
+in
+{
   home.username = "lucas";
   home.homeDirectory = "/home/lucas";
 
@@ -24,6 +24,8 @@ in {
     enable = true;
     userName = "Lucas Philippe";
     userEmail = "git@lucasphilippe.com";
-    extraConfig = { init.defaultBranch = "main"; };
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
   };
 }

@@ -19,24 +19,26 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
-    nixosConfigurations = {
-      # main laptop
-      apollo = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/apollo
-          inputs.nixos-hardware.nixosModules.asus-zephyrus-gu603h # even though this laptop is a GU604VI
-        ];
-        specialArgs = { inherit inputs; };
-      };
+  outputs =
+    inputs@{ nixpkgs, home-manager, ... }:
+    {
+      nixosConfigurations = {
+        # main laptop
+        apollo = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/apollo
+            inputs.nixos-hardware.nixosModules.asus-zephyrus-gu603h # even though this laptop is a GU604VI
+          ];
+          specialArgs = { inherit inputs; };
+        };
 
-      # virtual machine for testing
-      nixos = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [ ./hosts/nixos ];
-        specialArgs = { inherit inputs; };
+        # virtual machine for testing
+        nixos = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [ ./hosts/nixos ];
+          specialArgs = { inherit inputs; };
+        };
       };
     };
-  };
 }

@@ -1,8 +1,4 @@
 {
-  config,
-  pkgs,
-  inputs,
-  lib,
   ...
 }:
 
@@ -15,7 +11,10 @@
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
       "$notificationDaemon" = "swaync";
-      "exec-once" = [ "$terminal &" "$notificationDaemon" ];
+      "exec-once" = [
+        "$terminal &"
+        "$notificationDaemon"
+      ];
 
       "monitor" = [
         "eDP-1, 2560x1600@240, 0x0, 1"

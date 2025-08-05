@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... }:
+{ lib, ... }:
 
 {
   programs.starship = {
@@ -16,7 +16,9 @@
         "$python"
         "$character"
       ];
-      directory = { style = "blue"; };
+      directory = {
+        style = "blue";
+      };
 
       character = {
         successSymbol = "[❯](purple)";
@@ -30,8 +32,7 @@
       };
 
       git_status = {
-        format =
-          "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)";
+        format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)";
         style = "cyan";
         conflicted = "​";
         untracked = "​";

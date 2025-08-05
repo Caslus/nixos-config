@@ -1,4 +1,4 @@
-{ inputs, config, lib, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
@@ -33,7 +33,10 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   nixpkgs.config.allowUnfree = true;
 
@@ -63,8 +66,7 @@
     enable = true;
     settings = {
       default_session = {
-        command =
-          "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd hyprland";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd hyprland";
       };
     };
   };
@@ -83,4 +85,3 @@
 
   system.stateVersion = "25.05";
 }
-
