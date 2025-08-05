@@ -3,9 +3,7 @@
 {
     imports =
     [ 
-      ./users/lucas.nix
-
-      ./features/shell/starship
+      ./lucas/home.nix
     ];
 
     home.packages = with pkgs; [ 
@@ -18,6 +16,13 @@
 
         swaynotificationcenter
     ];
+
+    programs.vscode = {
+      enable = true;
+      extensions = with pkgs.vscode-extensions; [
+        catppuccin.catppuccin-vsc
+      ];
+    };
 
     # i cant even test this right now
     programs.kitty.enable = true;
