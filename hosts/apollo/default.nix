@@ -28,6 +28,10 @@
     networkmanager.enable = true;
   };
 
+  time.timeZone = "America/Sao_Paulo";
+
+  i18n.defaultLocale = "en_US.UTF-8";
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   services.openssh.enable = true;
@@ -52,11 +56,7 @@
     '';
   };
 
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-    xwayland.enable = true;
-  };
+  programs.hyprland.enable = true;
 
   programs.nix-ld.enable = true; # so vscode remote ssh works
 
