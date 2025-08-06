@@ -13,6 +13,7 @@
     useUserPackages = true;
     backupFileExtension = "bak";
     users.lucas = import ../../home;
+    extraSpecialArgs = { inherit inputs; };
   };
 
   fonts.fontDir.enable = true;
@@ -27,6 +28,9 @@
   networking = {
     hostName = "apollo";
     networkmanager.enable = true;
+
+    useDHCP = false;
+    useNetworkd = false;
   };
 
   time.timeZone = "America/Sao_Paulo";
@@ -47,7 +51,10 @@
     isNormalUser = true;
     shell = pkgs.fish;
     group = "lucas";
-    extraGroups = [ "wheel" ];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ];
   };
 
   programs.fish = {

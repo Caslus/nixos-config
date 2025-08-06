@@ -1,6 +1,7 @@
 {
   lib,
   osConfig,
+  inputs,
   ...
 }:
 let
@@ -18,6 +19,7 @@ in
     ../../modules/wm/hyprland/binds.nix
 
     ../../modules/gui/vscode.nix
+    ../../modules/gui/zen-browser
   ];
 
   programs.git = {
