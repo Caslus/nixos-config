@@ -1,8 +1,11 @@
-{
-  ...
-}:
+{ ... }:
 
 {
+  imports = [
+    ./binds.nix
+    ./hyprlock.nix
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -35,7 +38,7 @@
         blur = {
           enabled = true;
           xray = true;
-          size = 8;
+          size = 4;
           passes = 3;
           new_optimizations = "on";
           noise = 0.01;

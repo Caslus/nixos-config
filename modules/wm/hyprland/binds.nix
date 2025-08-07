@@ -11,6 +11,7 @@
         "$mainMod, M, exit"
         "$mainMod, T, togglefloating"
         "$mainMod, F, fullscreen"
+        "$mainMod, L, exec, hyprlock"
 
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
