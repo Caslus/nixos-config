@@ -18,6 +18,7 @@ in
     ../../modules/wm/hyprland/home.nix
     ../../modules/wm/hyprland/binds.nix
 
+    ../../modules/gui/kitty
     ../../modules/gui/vscode.nix
     ../../modules/gui/zen-browser
   ];

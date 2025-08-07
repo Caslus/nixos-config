@@ -14,8 +14,5 @@
     swaynotificationcenter
   ];
 
-  # i cant even test this right now
-  programs.kitty.enable = true;
-
   home.stateVersion = "25.05";
 }
