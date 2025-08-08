@@ -12,7 +12,7 @@ in
   home.homeDirectory = "/home/lucas";
 
   imports = [
-    ../../modules/tui/starship.nix
+    ../../modules/tui/fish.nix
   ]
   ++ lib.optionals (hostname == "apollo") [
     ../../modules/wm/hyprland/home.nix
@@ -29,5 +29,9 @@ in
     extraConfig = {
       init.defaultBranch = "main";
     };
+  };
+
+  systemd.user.sessionVariables = {
+    TERM = "fish";
   };
 }

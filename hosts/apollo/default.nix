@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
 
+    ../../modules/tui/greetd.nix
     ../../modules/wm/hyprland
   ];
 
@@ -49,33 +50,11 @@
   users.groups.lucas = { };
   users.users.lucas = {
     isNormalUser = true;
-    shell = pkgs.fish;
     group = "lucas";
     extraGroups = [
       "wheel"
       "networkmanager"
     ];
-  };
-
-  programs.fish = {
-    enable = true;
-    vendor = {
-      completions.enable = true;
-      config.enable = true;
-      functions.enable = true;
-    };
-    interactiveShellInit = ''
-      set fish_greeting
-    '';
-  };
-
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd hyprland";
-      };
-    };
   };
 
   security.rtkit.enable = true;
@@ -85,10 +64,6 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-
-  programs.firefox.enable = true;
-
-  programs.nix-ld.enable = true; # so vscode remote ssh works
 
   system.stateVersion = "25.05";
 }

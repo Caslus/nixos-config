@@ -16,7 +16,6 @@
       "$notificationDaemon" = "swaync";
 
       exec-once = [
-        "$terminal &"
         "$notificationDaemon"
       ];
 
@@ -30,7 +29,6 @@
       };
 
       input = {
-        kb_layout = "us_intl";
         touchpad = {
           disable_while_typing = false;
           natural_scroll = true;
@@ -65,6 +63,7 @@
 
       windowrulev2 = [
         "noborder, focus:0"
+        "opacity 0.8 0.8, class:^(Code)$"
       ];
 
       env = [
