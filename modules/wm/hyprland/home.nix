@@ -29,6 +29,15 @@
         force_zero_scaling = true;
       };
 
+      input = {
+        kb_layout = "us_intl";
+        touchpad = {
+          disable_while_typing = false;
+          natural_scroll = true;
+        };
+        follow_mouse = 2;
+      };
+
       animation = [
         "windows, 1, 10, default, gnomed"
       ];
@@ -46,10 +55,16 @@
           brightness = 0.8;
           popups = true;
         };
+
+        shadow = {
+          range = 20;
+          render_power = 2;
+          color = "rgba(0, 0, 0, 0.3)";
+        };
       };
 
       windowrulev2 = [
-        "float, noblur, class:(kitty-bg)"
+        "noborder, focus:0"
       ];
 
       env = [

@@ -1,4 +1,5 @@
 {
+  pkgs,
   ...
 }:
 
@@ -6,6 +7,12 @@ let
   wallpaperPath = "~/Pictures/wallpapers";
 in
 {
+  fonts.fontconfig.enable = true;
+  home.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+    fortune
+  ];
+
   services.hyprpaper = {
     enable = true;
     settings = {
@@ -59,26 +66,39 @@ in
           valign = "center";
 
         }
+
+        {
+
+          monitor = "";
+          text = ''cmd[update:300000] fortune -s'';
+          color = "rgba(242, 243, 244, 0.75)";
+          font_size = 16;
+          font_family = "JetBrains Mono";
+          position = "0, 50";
+          halign = "center";
+          valign = "bottom";
+
+        }
       ];
 
       input-field = {
         monitor = "";
         size = "200,50";
         outline_thickness = 2;
-        dots_size = 0.2;
-        dots_spacing = 0.35;
+        dots_size = 0.15;
+        dots_spacing = 0.45;
         dots_center = true;
         outer_color = "rgba(0, 0, 0, 0)";
-        inner_color = "rgba(0, 0, 0, 0.2)";
+        inner_color = "rgba(0, 0, 0, 0.1)";
         font_color = "rgb(255, 255, 255)";
-        fade_on_empty = false;
+        fade_on_empty = true;
         rounding = -1;
         check_color = "rgb(255, 255 ,255)";
         placeholder_text = ''<i><span foreground="##cdd6f4">Password</span></i>'';
         hide_input = false;
-        position = "0, -100";
+        position = "0, 140";
         halign = "center";
-        valign = "center";
+        valign = "bottom";
       };
     };
   };
