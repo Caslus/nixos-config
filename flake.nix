@@ -24,10 +24,10 @@
     {
       nixosConfigurations = {
         # main laptop
-        apollo = nixpkgs.lib.nixosSystem {
+        amon = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./hosts/apollo
+            ./hosts/amon
             inputs.nixos-hardware.nixosModules.asus-zephyrus-gu603h # even though this laptop is a GU604VI
           ];
           specialArgs = { inherit inputs; };

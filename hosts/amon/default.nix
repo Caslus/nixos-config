@@ -28,7 +28,7 @@
   };
 
   networking = {
-    hostName = "apollo";
+    hostName = "amon";
     networkmanager.enable = true;
 
     useDHCP = false;

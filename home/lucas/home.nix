@@ -14,7 +14,7 @@ in
   imports = [
     ../../modules/tui/fish.nix
   ]
-  ++ lib.optionals (hostname == "apollo") [
+  ++ lib.optionals (hostname == "amon") [
     ../../modules/wm/hyprland/home.nix
 
     ../../modules/gui/kitty
