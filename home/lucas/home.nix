@@ -20,6 +20,7 @@ in
     ../../modules/gui/kitty
     ../../modules/gui/vscode.nix
     ../../modules/gui/zen-browser
+    ../../modules/gui/flatpak/home.nix
   ];
 
   programs.git = {
