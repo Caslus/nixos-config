@@ -12,6 +12,7 @@
         "$mainMod, T, togglefloating"
         "$mainMod, F, fullscreen"
         "$mainMod, L, exec, hyprlock"
+        "$mainMod, Space, exec, rofi -show drun -show-icons"
 
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"

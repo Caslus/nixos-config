@@ -4,6 +4,8 @@
   imports = [
     ./binds.nix
     ./hyprlock.nix
+
+    ../rofi
   ];
 
   wayland.windowManager.hyprland = {
@@ -64,6 +66,11 @@
       windowrulev2 = [
         "noborder, focus:0"
         "opacity 0.8 0.8, class:^(Code)$"
+      ];
+
+      layerrule = [
+        "blur, rofi"
+        "ignorezero, rofi"
       ];
 
       env = [
