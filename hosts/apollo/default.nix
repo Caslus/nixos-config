@@ -24,6 +24,7 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
+    kernelModules = [ "ax88179_178a" ];
   };
 
   networking = {

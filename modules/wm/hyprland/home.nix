@@ -1,24 +1,39 @@
-{ ... }:
+{
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
 
 {
   imports = [
     ./binds.nix
-    ./hyprlock.nix
 
+    ../hyprlock
     ../rofi
+    ../waybar
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
 
+    plugins = [
+      pkgs.hyprlandPlugins.hyprsplit
+      pkgs.hyprlandPlugins.hyprspace
+    ];
+
     settings = {
       "$mainMod" = "SUPER";
+      "$modShift" = "SUPER_SHIFT";
       "$terminal" = "kitty";
       "$notificationDaemon" = "swaync";
 
       exec-once = [
-        "$notificationDaemon"
+        "$notificationDaemon &"
+        "waybar &"
+        "swaync --scale 1.6 --output eDP-1 &"
+        "swaync --scale 1.0 --output HDMI-A-1"
       ];
 
       monitor = [
@@ -71,6 +86,9 @@
       layerrule = [
         "blur, rofi"
         "ignorezero, rofi"
+
+        "blur, waybar"
+        "ignorezero, waybar"
       ];
 
       env = [
