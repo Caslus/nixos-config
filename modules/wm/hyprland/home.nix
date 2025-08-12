@@ -85,6 +85,7 @@
       windowrulev2 = [
         "noborder, focus:0"
         "opacity 0.8 0.8, class:^(Code)$"
+        "opacity 0.8 0.8, class:^(vesktop)$"
       ];
 
       layerrule = [
