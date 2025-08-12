@@ -8,10 +8,6 @@
     wget
     git-crypt
     gnupg
-    fastfetch
-    neovim
-
-    swaynotificationcenter
   ];
 
   home.stateVersion = "25.05";
