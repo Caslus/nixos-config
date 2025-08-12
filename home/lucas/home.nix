@@ -21,6 +21,7 @@ in
     ../../modules/gui/vscode.nix
     ../../modules/gui/zen-browser
     ../../modules/gui/flatpak/home.nix
+    ../../modules/gui/vesktop
   ];
 
   programs.git = {
