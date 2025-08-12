@@ -14,6 +14,10 @@
     ../waybar
   ];
 
+  home.packages = [
+    inputs.mcmojave-hyprcursor.packages.${pkgs.stdenv.hostPlatform.system}.default
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -93,6 +97,8 @@
 
       env = [
         "AQ_DRM_DEVICES, /dev/dri/card0:/dev/dri/card1"
+        "HYPRCURSOR_THEME, McMojave"
+        "HYPRCURSOR_SIZE, 32"
       ];
     };
   };

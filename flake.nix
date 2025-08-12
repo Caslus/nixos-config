@@ -19,6 +19,8 @@
     };
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
+    mcmojave-hyprcursor.url = "github:libadoxon/mcmojave-hyprcursor";
   };
 
   outputs =
