@@ -91,9 +91,12 @@
       layerrule = [
         "blur, rofi"
         "ignorezero, rofi"
+        "xray 0, rofi"
 
         "blur, waybar"
+        "blurpopups, waybar"
         "ignorezero, waybar"
+        "xray 0, waybar"
       ];
 
       env = [

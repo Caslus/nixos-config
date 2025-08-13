@@ -21,26 +21,26 @@ window#waybar {
 
 tooltip {
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.01);
+    background-color: rgba(24, 24, 37, 0.1);
     border-radius: 10px;
 }
 
 /*-----module groups----*/
 .modules-right {
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.01);
+    background-color: rgba(24, 24, 37, 0.1);
     border-radius: 10px;
 }
 
 .modules-center {
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.01);
+    background-color: rgba(24, 24, 37, 0.1);
     border-radius: 10px;
 }
 
 .modules-left {
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.01);
+    background-color: rgba(24, 24, 37, 0.1);
     border-radius: 10px;
 }
 

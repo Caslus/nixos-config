@@ -1,8 +1,5 @@
 {
-  config,
-  pkgs,
   inputs,
-  lib,
   ...
 }:
 
@@ -11,8 +8,24 @@
     inputs.zen-browser.homeModules.beta
   ];
 
+  xdg.mimeApps.defaultApplications = {
+    "text/html" = [ "zen" ];
+    "text/xml" = [ "zen" ];
+    "x-scheme-handler/http" = [ "zen" ];
+    "x-scheme-handler/https" = [ "zen" ];
+  };
+
   programs.zen-browser = {
     enable = true;
+
+    profiles.default = {
+      userChrome = builtins.readFile ./userChrome.css; # these are not working idk why
+      userContent = builtins.readFile ./userContent.css;
+
+      settings = {
+        toolkit.legacyUserProfileCustomizations.stylesheets = true;
+      };
+    };
 
     policies = {
       AutofillAddressEnabled = false;

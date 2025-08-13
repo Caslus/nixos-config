@@ -12,7 +12,6 @@
     profiles = {
       default = {
         extensions = with pkgs.vscode-extensions; [
-          catppuccin.catppuccin-vsc
           jnoortheen.nix-ide
         ];
 
@@ -26,7 +25,6 @@
               };
             };
           };
-          "workbench.colorTheme" = "Catppuccin Mocha";
           "editor.formatOnSave" = true;
         };
       };

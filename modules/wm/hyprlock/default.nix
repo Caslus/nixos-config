@@ -50,7 +50,7 @@ in
           color = "rgba(242, 243, 244, 0.75)";
           font_size = 95;
           font_family = "JetBrains Mono";
-          position = "0, 300";
+          position = "0, 400";
           halign = "center";
           valign = "center";
         }
@@ -61,7 +61,7 @@ in
           color = "rgba(242, 243, 244, 0.75)";
           font_size = 22;
           font_family = "JetBrains Mono";
-          position = "0, 200";
+          position = "0, 300";
           halign = "center";
           valign = "center";
 

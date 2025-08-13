@@ -14,6 +14,7 @@ in
   imports = [
     ../../modules/tui/fish.nix
     ../../modules/tui/fastfetch.nix
+    ../../modules/tui/catppuccin
   ]
   ++ lib.optionals (hostname == "amon") [
     ../../modules/wm/hyprland/home.nix
