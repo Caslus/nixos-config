@@ -8,7 +8,7 @@
    <div align="center">
       <p></p>
       <div align="center">
-         <a href="https://github.com/Frost-Phoenix/nixos-config/stargazers">
+         <a href="https://github.com/Caslus/nixos-config/stargazers">
             <img src="https://img.shields.io/github/stars/Caslus/nixos-config?color=b4befe&labelColor=1e1e2e&style=for-the-badge&logo=github&logoColor=b4befe">
          </a>
          <a = href="https://nixos.org">
