@@ -12,6 +12,7 @@
     ../hyprlock
     ../rofi
     ../waybar
+    ../grimblast
   ];
 
   home.packages = [

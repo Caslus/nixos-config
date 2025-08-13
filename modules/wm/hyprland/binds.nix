@@ -13,6 +13,7 @@
         "$mainMod, F, fullscreen"
         "$mainMod, L, exec, hyprlock"
         "$mainMod, Space, exec, rofi -show drun -show-icons"
+        ", PRINT, exec, grimblast --notify copy area"
 
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
