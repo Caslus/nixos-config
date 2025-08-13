@@ -9,10 +9,10 @@
   ];
 
   xdg.mimeApps.defaultApplications = {
-    "text/html" = [ "zen" ];
-    "text/xml" = [ "zen" ];
-    "x-scheme-handler/http" = [ "zen" ];
-    "x-scheme-handler/https" = [ "zen" ];
+    "text/html" = [ "zen-beta" ];
+    "text/xml" = [ "zen-beta" ];
+    "x-scheme-handler/http" = [ "zen-beta" ];
+    "x-scheme-handler/https" = [ "zen-beta" ];
   };
 
   programs.zen-browser = {
