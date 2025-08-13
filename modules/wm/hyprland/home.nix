@@ -10,6 +10,7 @@
     ./binds.nix
 
     ../hyprlock
+    ../hypridle
     ../rofi
     ../waybar
     ../grimblast
