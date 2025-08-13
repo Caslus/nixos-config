@@ -1,7 +1,7 @@
 {
   lib,
   osConfig,
-  inputs,
+  pkgs,
   ...
 }:
 let
@@ -26,6 +26,11 @@ in
     ../../modules/gui/vesktop
   ];
 
+  home.packages = with pkgs; [
+    curl
+    wget
+  ];
+
   programs.git = {
     enable = true;
     userName = "Lucas Philippe";
@@ -38,4 +43,6 @@ in
   systemd.user.sessionVariables = {
     TERM = "fish";
   };
+
+  home.stateVersion = "25.05";
 }

@@ -13,7 +13,7 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "bak";
-    users.lucas = import ../../home;
+    users.lucas = import ../../home/lucas;
     extraSpecialArgs = { inherit inputs; };
   };
 
