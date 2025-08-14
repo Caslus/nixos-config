@@ -13,14 +13,6 @@ in
     fortune
   ];
 
-  services.hyprpaper = {
-    enable = true;
-    settings = {
-      preload = "${wallpaperPath}/1.png";
-      wallpaper = ", ${wallpaperPath}/1.png";
-    };
-  };
-
   programs.hyprlock = {
     enable = true;
     settings = {

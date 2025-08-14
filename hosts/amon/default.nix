@@ -7,6 +7,7 @@
 
     ../../modules/tui/greetd.nix
     ../../modules/wm/hyprland
+    ../../modules/wm/swww
   ];
 
   home-manager = {

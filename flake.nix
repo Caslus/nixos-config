@@ -23,6 +23,8 @@
     mcmojave-hyprcursor.url = "github:libadoxon/mcmojave-hyprcursor";
 
     catppuccin.url = "github:catppuccin/nix";
+
+    swww.url = "github:LGFae/swww";
   };
 
   outputs =
