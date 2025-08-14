@@ -19,6 +19,7 @@ in
   ++ lib.optionals (hostname == "amon") [
     ../../modules/wm/hyprland/home.nix
 
+    ../../modules/gui/asusctl
     ../../modules/gui/kitty
     ../../modules/gui/vscode.nix
     ../../modules/gui/zen-browser

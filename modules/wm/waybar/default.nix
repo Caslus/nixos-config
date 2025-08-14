@@ -8,6 +8,7 @@ in
   home.packages = with pkgs; [
     brightnessctl
     swaynotificationcenter
+    libnotify
   ];
 
   programs.waybar = {
