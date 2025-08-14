@@ -4,7 +4,7 @@
 
 let
   monBrightnessDown = ''p=$(brightnessctl g); m=$(brightnessctl m); min=$((m/10)); if [ $p -le $min ]; then brightnessctl set $min; else brightnessctl set 5%-; fi'';
-  changeFanProfile = ''asusctl profile -n && asusctl profile -p | grep Active | awk '{print $4}' | xargs notify-send "Fan Profile Changed"'';
+  changeFanProfile = ''asusctl profile -n && asusctl profile -p | grep Active | awk '{print $4}' | xargs dunstify "Fan Profile Changed" -t 2000'';
   raiseVolume = ''wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+'';
   lowerVolume = ''wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-'';
 in

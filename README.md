@@ -67,7 +67,7 @@ nixos-config/
 | **Window Manager**       | [Hyprland][Hyprland]               |
 | **Bar**                  | [Waybar][Waybar]                   |
 | **Application Launcher** | [rofi-wayland][rofi-wayland]       |
-| **Notification Daemon**  | [swaync][swaync]                   |
+| **Notification Daemon**  | [dunst][dunst]                     |
 | **Terminal Emulator**    | [kitty][kitty]                     |
 | **Shell**                | [fish][fish]                       |
 | **System Info**          | [fastfetch][fastfetch]             |
@@ -121,7 +121,7 @@ nixos-config/
 [Hyprland]: https://github.com/hyprwm/Hyprland  
 [Waybar]: https://github.com/Alexays/Waybar  
 [rofi-wayland]: https://github.com/in0ni/rofi-wayland  
-[swaync]: https://github.com/ErikReider/SwayNotificationCenter  
+[dunst]: https://github.com/dunst-project/dunst
 [kitty]: https://github.com/kovidgoyal/kitty  
 [fish]: https://github.com/fish-shell/fish-shell  
 [VSCode]: https://github.com/microsoft/vscode  

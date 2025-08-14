@@ -16,8 +16,6 @@
       icons.enable = true;
     };
 
-    swaync.enable = true;
-
     waybar.enable = false;
     hyprlock.enable = false;
   };

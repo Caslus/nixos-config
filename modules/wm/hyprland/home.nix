@@ -10,6 +10,7 @@
 
     ../hyprlock
     ../hypridle
+    ../dunst
     ../rofi
     ../waybar
     ../grimblast
@@ -32,13 +33,11 @@
       "$mainMod" = "SUPER";
       "$modShift" = "SUPER_SHIFT";
       "$terminal" = "kitty";
-      "$notificationDaemon" = "swaync";
+      "$notificationDaemon" = "dunst";
 
       exec-once = [
         "$notificationDaemon &"
-        "waybar &"
-        "swaync --scale 1.6 --output eDP-1 &"
-        "swaync --scale 1.0 --output HDMI-A-1"
+        "waybar"
       ];
 
       monitor = [
