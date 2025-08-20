@@ -5,7 +5,7 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
 
-    ../../modules/tui/greetd.nix
+    ../../modules/wm/sddm
     ../../modules/wm/hyprland
     ../../modules/wm/swww
   ];

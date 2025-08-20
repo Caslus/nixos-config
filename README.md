@@ -64,6 +64,7 @@ nixos-config/
 
 | Component                | Technology/Module                  |
 |--------------------------|------------------------------------|
+| **Session Manager**      | [SDDM][SDDM]                       |
 | **Window Manager**       | [Hyprland][Hyprland]               |
 | **Bar**                  | [Waybar][Waybar]                   |
 | **Application Launcher** | [rofi-wayland][rofi-wayland]       |
@@ -118,6 +119,7 @@ nixos-config/
   This setup uses Nix flakes for reproducibility and easy updates.
 
 
+[SDDM]: https://github.com/sddm/sddm
 [Hyprland]: https://github.com/hyprwm/Hyprland  
 [Waybar]: https://github.com/Alexays/Waybar  
 [rofi-wayland]: https://github.com/in0ni/rofi-wayland  

@@ -25,6 +25,11 @@
     catppuccin.url = "github:catppuccin/nix";
 
     swww.url = "github:LGFae/swww";
+
+    silentSDDM = {
+      url = "github:uiriansan/SilentSDDM";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
