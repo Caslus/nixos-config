@@ -6,6 +6,10 @@ let
   };
 in
 {
+  imports = [
+    ./sddm-avatar.nix
+  ];
+
   environment.systemPackages = [
     sddm-theme
     sddm-theme.test
