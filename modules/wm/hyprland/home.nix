@@ -8,6 +8,7 @@
   imports = [
     ./binds.nix
 
+    ../fonts
     ../hyprlock
     ../hypridle
     ../dunst
