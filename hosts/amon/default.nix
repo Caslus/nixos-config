@@ -21,12 +21,23 @@
   fonts.fontDir.enable = true;
 
   boot = {
+    plymouth = {
+      enable = true;
+    };
+
     loader = {
-      systemd-boot.enable = true;
+      timeout = 1;
+      systemd-boot = {
+        enable = true;
+        configurationLimit = 5;
+      };
       efi.canTouchEfiVariables = true;
     };
     kernelModules = [ "ax88179_178a" ];
     kernelParams = [
+      "quiet"
+      "splash"
+
       "nvidia_drm.modeset=1"
       "nvidia_drm.fbdev=1"
       "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
